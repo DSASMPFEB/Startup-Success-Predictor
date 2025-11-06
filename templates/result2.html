@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Startup Forecast Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-image: url("{{ url_for('static', filename='image2/steps.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+        }
+
+        /* Popup styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #dcc4b4;
+            border: 2px solid #0b0e0b;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup.show {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .smiley {
+            font-size: 48px;
+        }
+
+        .advice {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .button-row {
+            margin-top: 350px;
+            text-align: center;
+        }
+
+        .button-row a {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+            background-color: #313b43;
+            color: white;
+            padding: 14px 0;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-row a:hover {
+            background-color: #1d242a;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: #110c0a; font-size: 40px;">Startup Forecast Result</h1>
+
+    <div class="results">
+        <h2 style="text-align: center; font-size: 32px; color: #985007; margin-top: 70px; line-height: 1.6;">
+            Estimated Year of High Success:<br>
+            <span style="display: inline-block; text-align: center;">{{ predicted_year }}</span>
+        </h2>
+    </div>
+
+    <!-- Smiley Popup -->
+    <div id="popup" class="popup">
+        <div class="smiley">😊</div>
+        <div class="advice">Keep refining your vision and stay persistent—your breakthrough is on the horizon!</div>
+    </div>
+
+    <script>
+        // Show popup after a short delay
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById('popup').classList.add('show');
+            }, 1000); // 1 second delay
+        };
+    </script>
+    <div class="button-row">
+        <a href="/future">🔄 Try Another Prediction</a>
+        <a href="/">🏠 Go to Home Page</a>
+    </div>
+</body>
+
+</html>
+
+</html>

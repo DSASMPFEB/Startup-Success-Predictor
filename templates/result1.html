@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Startup Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-image: url("{{ url_for('static', filename='image1/tech.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.85);
+            min-height: 100vh;
+            padding: 40px 60px;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            text-align: left;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #93540c;
+            margin-left: 130px;
+            margin-bottom: -10px
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #a4a581;
+            margin-left: 200px;
+            margin-top: 0px
+        }
+
+        h3 {
+            font-size: 28px;
+            color: #a4a581;
+            margin-left: 70px
+        }
+
+        p {
+            font-size: 20px;
+            color: #d5910a;
+            /* This sets the text color */
+            line-height: 1.6;
+        }
+
+        .back-button {
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #0078D4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .back-button a:hover {
+            background-color: #90a2ae;
+        }
+
+        .button-row {
+            margin-top: 20px;
+            margin-left: 300px;
+        }
+
+        .button-row a {
+            display: block;
+            width: 30%;
+            text-align: center;
+            background-color: #313b43;
+            color: white;
+            padding: 14px 0;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-row a:hover {
+            background-color: #1d242a;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Startup Evaluation Result</h1>
+
+    <div class="results {{ success_label|lower }}">
+
+        <h2>Predicted Success Label:
+            {{ success_label }}
+            {% if success_label == "High" %}
+            🚀
+            {% elif success_label == "Medium" %}
+            ⚡
+            {% else %}
+            🧊
+            {% endif %}
+        </h2>
+
+        <h3>Recommended Next-Round Funding: ₹ {{ funding_amount }} Lakhs</h3>
+
+        <p style="margin-top: 20px; font-size: 15px; line-height: 1.5; color: #a65959;  margin-left: 30px; text-align: center;">
+            To move forward confidently, focus on refining your product-market fit, building investor trust, and
+            aligning your next funding round with clear growth milestones.
+        </p>
+
+        <div class="button-row">
+            <a href="/existing">🔄 Try Another
+                Prediction</a>
+            <a href="/">🏠 Go to Home Page</a>
+        </div>
+
+    </div>
+</body>
+
+</html>

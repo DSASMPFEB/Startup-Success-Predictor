@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GrowthOracle – Startup Success Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-title">GrowthOracle</h1>
+        <p class="sub-title">Like a crystal ball for startup growth.</p>
+
+        <h2 class="section-title">Startup Success Simulator</h2>
+        <p class="center-text">Choose your path to explore startup outcomes:</p>
+
+
+        <div class="card-container">
+            <div class="card">
+                <h2 class="card-text">Evaluate Existing Startup</h2>
+                <p class="card-text">Predict current success and funding needs based on real data.</p>
+                <form action="/existing" method="get">
+                    <button type="submit">Start Evaluation</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2 class="card-text">Plan Future Startup</h2>
+                <p class="card-text">Simulate your startup's growth and forecast its success year.</p>
+                <form action="/future" method="get">
+                    <button type="submit">Start Planning</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-link">
+        <div>
+            <a href="{{ url_for('intro_report') }}">
+                📈 Access Preliminary Analysis Report
+    
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
