@@ -1,0 +1,122 @@
+.main-title {
+    font-size: 6.5em;
+    color: #040506ca;
+    margin-bottom: 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 1.4em;
+    color: #9f8484;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #1c1b1b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+}
+body {
+    background-image: url('/static/image/front.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #141313;
+}
+.subtitle {
+    font-size: 1.2em;
+    color: #242323;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #91a1a5;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(86, 80, 80, 0.1);
+    width: 300px;
+    text-align: left;
+}
+.card form {
+    display: flex;
+    justify-content: center;
+}
+
+.card button {
+    margin-top: 10px;
+}
+.card h2 {
+    margin-top: 0;
+    color: #11314a;
+}
+
+.card p {
+    color: #444;
+    margin-bottom: 20px;
+}
+.card-text {
+    text-align: center;
+}
+
+button {
+    background-color: #1b3951;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    
+}
+
+button:hover {
+    background-color: #03080b;
+    text-align: center;
+}
+
+.dashboard-link {
+    color: #d43030;
+    font-weight: bold;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.dashboard-link a {
+    color: rgb(15, 3, 58);
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

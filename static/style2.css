@@ -1,0 +1,100 @@
+/* Background and layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-image: url('/static/image2/cabin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #c2a7a7;
+}
+
+form {
+    position: fixed;
+    bottom: 60px;
+    right: 110px;
+    width: 300px;
+    background-color: transparent;
+    /* semi-transparent */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    color: #846363;
+    z-index: 1000;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-top: 40px;
+    color: #c98c8c;
+}
+
+/* Labels and inputs */
+label {
+    
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #ebbcbc;
+}
+
+select,
+input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    background-color: transparent;
+    color: #cab0b0;
+}
+
+select:focus,
+input[type="range"]:focus {
+    outline: none;
+    border-color: #00bcd4;
+        /* light cyan or blue highlight */
+        box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+/* Output for slider */
+output {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #cac6af;
+}
+
+/* Submit button */
+button[type="submit"] {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #111213;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
